@@ -1,0 +1,31 @@
+{
+  "name": "jibble-auto-fill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rellena automaticamente las jornadas laborales faltantes en Jibble automatizando el navegador (sin acceso admin a la API)",
+  "scripts": {
+    "postinstall": "playwright install chromium",
+    "login": "tsx src/cli/login.ts",
+    "inspect": "tsx src/cli/inspect.ts",
+    "dry-run": "tsx src/cli/dryRun.ts",
+    "fill": "tsx src/cli/fill.ts",
+    "verify": "tsx src/cli/verify.ts",
+    "gaps": "tsx src/cli/gaps.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "luxon": "^3.5.0",
+    "playwright": "^1.47.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
